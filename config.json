@@ -1,0 +1,15 @@
+{
+    "ownerId":"id del owner",
+    "clientId": "id del bot",
+    "guildId": "id del servidor",
+    "comandos":"enlace canal cmd",
+    "tickets":"enlace canal tickets",
+    "sugerencia":"enlace canal sugerencias",
+    "reglas":"enlace canal terminos",
+    "payments":"enlace canal metodos de pago",
+    "feedback":"enlace canal feedbacks",
+    "staffsoporte":"id del rol staff",
+    "eventas":"id del rol encargado de ventas",
+    "colorpredeterminado":"#000001",
+    "token":"",
+
