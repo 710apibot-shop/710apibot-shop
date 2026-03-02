@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { joinVoiceChannel } = require('@discordjs/voice');
 const Discord = require("discord.js");
 const path = require('path')
 const sqlite3 = require('sqlite3').verbose();
@@ -156,6 +157,29 @@ client.on("interactionCreate", async (interaction) => {
 client.on('ready', async () => {
   console.log(`🔥 Estoy online en ${client.user.username}!`);
   await registerCommands();
+
+  // --- LÓGICA DE VOZ ---
+  const guildId = "1469618754282586154"; // Reemplaza con la ID de tu server
+  const voiceChannelId = "1475258262692827354"; 
+
+  const guild = client.guilds.cache.get(guildId);
+  if (guild) {
+    try {
+      joinVoiceChannel({
+        channelId: voiceChannelId,
+        guildId: guild.id,
+        adapterCreator: guild.voiceAdapterCreator,
+        selfDeaf: true, // Se ensordece para ahorrar recursos
+        selfMute: false,
+      });
+      console.log(`🔊 Conectado al canal de voz en: ${guild.name}`);
+    } catch (error) {
+      console.error("❌ Error al conectar a voz:", error);
+    }
+  } else {
+    console.warn("⚠️ No se encontró el servidor para conectar a voz.");
+  }
+  // ---------------------
 
   // ✅ Estado fijo
   client.user.setActivity("discord.gg/710shop", {
