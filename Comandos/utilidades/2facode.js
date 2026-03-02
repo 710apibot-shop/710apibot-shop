@@ -8,7 +8,7 @@ module.exports = {
   type: Discord.ApplicationCommandType.ChatInput,
 
   run: async (client, interaction) => {
-    const allowedRoleId = "1384311530379808788";
+    const allowedRoleId = "1469618981781373042";
 
     if (!interaction.member.roles.cache.has(allowedRoleId)) {
       return interaction.reply({

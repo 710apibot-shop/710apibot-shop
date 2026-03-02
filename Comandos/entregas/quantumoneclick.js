@@ -22,10 +22,10 @@ module.exports = {
 
                 // Verificar si el usuario tiene el rol
         const member = interaction.member;
-        const hasRole = member.roles.cache.has(requiredRoleId);
+        const hasRole = member.roles.cache.has(requiredRoleId);"1469968666425823274"
     
         if (!hasRole) {
-          return interaction.reply({ content: "<:warninghost:1383935369275379874> | No tienes permiso para usar este comando.", ephemeral: true });
+          return interaction.reply({ content: " | No tienes permiso para usar este comando.", ephemeral: true });
         }
 
     let bot = client.user.username;
