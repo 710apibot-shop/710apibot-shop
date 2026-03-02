@@ -158,7 +158,7 @@ client.on('ready', async () => {
   await registerCommands();
 
   // ✅ Estado fijo
-  client.user.setActivity("discord.gg/hostgg", {
+  client.user.setActivity("discord.gg/710shop", {
     type: Discord.ActivityType.Watching
   });
 });
